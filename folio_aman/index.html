@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmanKumar</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./utils.css">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+    <!-- Noise Texture -->
+    <div class="grain"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="nav-logo reveal-element">AK</a>
+        <div class="nav-links reveal-element">
+            <a href="#work">Work</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero container">
+        <div class="hero-content">
+            <h1 class="hero-name reveal-element">Aman Kumar</h1>
+
+            <div class="hero-meta reveal-element">
+                <span>Product Engineer</span>
+                <span class="hero-divider"></span>
+                <span>Creative Dev</span>
+            </div>
+
+            <div class="hero-tagline reveal-element">
+                I build <span>fast, interactive web products</span> with taste and restraint.
+            </div>
+        </div>
+
+        <div class="scroll-indicator reveal-element">
+            Scroll
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="container">
+        <div class="section-header reveal-element">
+            <h2>Work</h2>
+            <span>01</span>
+        </div>
+
+        <div class="work-list">
+            <!-- Project 1 -->
+            <a href="#" class="project-item reveal-element">
+                <div class="project-info">
+                    <h3 class="project-title">Neural Style</h3>
+                </div>
+                <div class="project-meta">
+                    <span class="project-desc">Generative Art Pipeline</span>
+                    <span class="project-stack">Python · PyTorch</span>
+                </div>
+            </a>
+
+            <!-- Project 2 -->
+            <a href="#" class="project-item reveal-element">
+                <div class="project-info">
+                    <h3 class="project-title">Vanguard</h3>
+                </div>
+                <div class="project-meta">
+                    <span class="project-desc">Algorithmic Trading Dashboard</span>
+                    <span class="project-stack">React · D3.js · WebSocket</span>
+                </div>
+            </a>
+
+            <!-- Project 3 -->
+            <a href="#" class="project-item reveal-element">
+                <div class="project-info">
+                    <h3 class="project-title">Lumina</h3>
+                </div>
+                <div class="project-meta">
+                    <span class="project-desc">Customer Sentiment Engine</span>
+                    <span class="project-stack">NLP · FastAPI</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Capabilities Section -->
+    <section class="container">
+        <div class="section-header reveal-element">
+            <h2>Capabilities</h2>
+            <span>02</span>
+        </div>
+
+        <div class="capabilities-grid">
+            <!-- Experience Timeline -->
+            <div class="experience-col">
+                <h3 class="reveal-element" style="margin-bottom: 2rem; font-weight: 500; font-size: 1.25rem;">Experience
+                </h3>
+
+                <div class="timeline reveal-element">
+                    <div class="timeline-item">
+                        <span class="timeline-dot"></span>
+                        <span class="timeline-year">2025 — Present</span>
+                        <h4 class="timeline-role">Machine Learning Intern</h4>
+                        <span class="timeline-company">TechFlow Analytics</span>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="timeline-dot"></span>
+                        <span class="timeline-year">Summer 2024</span>
+                        <h4 class="timeline-role">Python Developer</h4>
+                        <span class="timeline-company">Innovate Labs</span>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="timeline-dot"></span>
+                        <span class="timeline-year">2021 — 2025</span>
+                        <h4 class="timeline-role">B.Tech (CS)</h4>
+                        <span class="timeline-company">State Technical University</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills List -->
+            <div class="skills-col">
+                <h3 class="reveal-element" style="margin-bottom: 2rem; font-weight: 500; font-size: 1.25rem;">Stack</h3>
+
+                <div class="skills-grid reveal-element">
+                    <div>
+                        <span class="text-small uppercase tracking-wide skill-category">Engineering</span>
+                        <ul class="skill-list">
+                            <li>Python (Advanced)</li>
+                            <li>TypeScript</li>
+                            <li>C++</li>
+                            <li>SQL / Postgres</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="text-small uppercase tracking-wide skill-category">Intelligence</span>
+                        <ul class="skill-list">
+                            <li>PyTorch</li>
+                            <li>TensorFlow</li>
+                            <li>OpenCV</li>
+                            <li>LLM Integration</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="text-small uppercase tracking-wide skill-category">Web</span>
+                        <ul class="skill-list">
+                            <li>Vanilla JS / ES6+</li>
+                            <li>Clean CSS</li>
+                            <li>GSAP / Three.js</li>
+                            <li>FastAPI</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="text-small uppercase tracking-wide skill-category">Tools</span>
+                        <ul class="skill-list">
+                            <li>Docker</li>
+                            <li>AWS</li>
+                            <li>Git Workflow</li>
+                            <li>Figma</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container">
+        <div class="reveal-element">
+            <p class="about-text">
+                I care about how things feel as much as how they work. I like interfaces that respond quickly, explain
+                themselves, and don’t show off. Most of my work sits at the intersection of <span
+                    style="color: white; font-weight: 400;">engineering discipline</span> and <span
+                    style="color: white; font-weight: 400;">visual restraint</span>.
+            </p>
+
+            <div class="status-badge">
+                <span class="status-dot"></span>
+                <span>Currently open to work · Based in NCR, India</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fullscreen Footer -->
+    <footer id="contact" class="footer-fullscreen container">
+        <div class="footer-content reveal-element">
+            <h2 class="footer-heading">Let’s talk.</h2>
+            <a href="mailto:aman@example.com" class="footer-email">aman.kumar@email.com</a>
+        </div>
+        <div class="footer-bottom">
+            <div class="social-links">
+                <a href="#">GitHub</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">X / Twitter</a>
+                <a href="#">Resume</a>
+            </div>
+
+            <div class="footer-meta">
+                <span>© 2026</span>
+                <span style="margin-left: 2rem;">Local time: <span id="time">00:00</span></span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

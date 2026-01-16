@@ -1,174 +1,93 @@
-/* --- VARIABLES & RESET --- */
+@import url("https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+/* VARIABLES */
 :root {
-  --color-bg: #080808;
-  --color-text-main: #ededed;
-  --color-text-muted: #888888;
-  --color-border: #333333;
-  --color-border-faint: rgba(255, 255, 255, 0.08);
-  --color-hover: #1a1a1a;
+  /* Colors */
+  --bg-color: #ececec;
+  --text-main: #111111;
+  --text-secondary: #666666;
+  --text-muted: rgba(0, 0, 0, 0.7);
+  --text-inverse: #ffffff;
 
-  --font-display: "Space Grotesk", sans-serif;
-  --font-body: "Inter", sans-serif;
-  --font-mono: "JetBrains Mono", monospace;
+  --accent: #000000;
+  --accent-hover: #222222;
+  --theme: rgba(214, 102, 255, 0.4);
 
-  --spacing-container: 6vw;
-  --spacing-section: 140px;
+  --card-bg: #ffffff;
+  --border-light: rgba(0, 0, 0, 0.1);
+  --border-med: #cccccc;
+
+  /* Navigation */
+  --nav-bg: #111111;
+  --nav-text: #999999;
+  --nav-active-bg: #ffffff;
+  --nav-active-text: #000000;
+
+  /* Typography */
+  --font-main: "Inter", sans-serif;
+  --font-mono: "Space Mono", monospace;
 }
 
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+html,
 body {
-  background-color: var(--color-bg);
-  color: var(--color-text-main);
-  font-family: var(--font-body);
-  -webkit-font-smoothing: antialiased;
+  font-family: var(--font-main);
+  background: var(--bg-color);
+  color: var(--text-main);
   overflow-x: hidden;
-  cursor: default;
+  -webkit-font-smoothing: antialiased;
+}
+::selection {
+  background: var(--theme);
+  color: var(--accent);
 }
 
-a {
+.btn {
+  --accent: #ececec;
+  display: inline-block;
+  padding: 16px 32px;
+  background: var(--text-main);
+  color: var(--text-inverse);
   text-decoration: none;
-  color: inherit;
-  transition: color 0.3s ease;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: transform 0.2s ease, background 0.2s;
 }
 
-ul {
-  list-style: none;
+.btn:hover {
+  transform: translateY(-2px);
+  background: var(--accent-hover);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-display);
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
 }
 
-/* --- UTILITIES --- */
-.container {
-  padding-left: var(--spacing-container);
-  padding-right: var(--spacing-container);
-  max-width: 1400px;
-  margin: 0 auto;
-  width: 100%;
+.btn-outline:hover {
+  background: var(--accent);
+  color: var(--text-inverse);
 }
 
-.uppercase {
-  text-transform: uppercase;
-}
-
-.mono {
-  font-family: var(--font-mono);
-}
-
-.flex {
-  display: flex;
-}
-
-.flex-col {
-  display: flex;
-  flex-direction: column;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.items-center {
-  align-items: center;
-}
-
-/* --- GRAIN OVERLAY --- */
-.grain {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 9999;
-  opacity: 0.04;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-}
-
-/* --- Reveal Element --- */
-.reveal-element {
+/* ANIMATIONS */
+.fade-in {
   opacity: 0;
   transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-/* --- RESPONSIVE --- */
-@media (max-width: 768px) {
-  :root {
-    --spacing-container: 20px;
-    --spacing-section: 90px;
-  }
-
-  .hero-name {
-    font-size: clamp(2.5rem, 13vw, 4.5rem);
-  }
-
-  .nav-links {
-    gap: 1.25rem;
-    font-size: 0.8rem;
-  }
-
-  .stack-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-meta {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .project-item {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .project-meta {
-    align-items: flex-end;
-    text-align: right;
-    margin-top: 0;
-  }
-
-  .log-entry {
-    grid-template-columns: 200px 1fr auto;
-    align-items: baseline;
-    padding: 3rem 0;
-  }
-
-  .log-year {
-    margin-bottom: 0;
-    font-size: 1rem;
-  }
-
-  .log-details {
-    flex-direction: row;
-    align-items: baseline;
-    gap: 2rem;
-  }
-
-  .log-company {
-    font-size: 1rem;
-  }
-
-  .footer-bottom {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

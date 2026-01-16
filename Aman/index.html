@@ -4,80 +4,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AmanKumar</title>
+    <title>Aman Kumar</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
-
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="./utils.css">
-    <link rel="stylesheet" href="./style.css">
-
+    <link rel="stylesheet" href="utils.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="grain"></div>
-
+    <!-- Navigation Bar -->
     <nav>
-        <a href="#" class="nav-logo reveal-element">AK</a>
-        <div class="nav-links reveal-element">
-            <a href="#work">Work</a>
-            <a href="#experience">Path</a>
-            <a href="#about">About</a>
+        <div class="nav-inner">
+            <div class="logo" id="logo">ak.</div>
+            <div class="navbar" id="navbar">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#tools" class="nav-link">Tools</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#about" class="nav-link">About</a>
+            </div>
         </div>
     </nav>
 
-    <section class="hero container" id="hero-section">
-        <!-- Injected via JS -->
-    </section>
+    <!-- Header -->
+    <header class="tab" id="home">
+        <div class="hero fade-in" id="hero">
 
-    <section id="work" class="container">
-        <div class="section-header reveal-element">
-            <h2>Selected Work</h2>
-            <span>01</span>
         </div>
-        <div class="work-list" id="work-list">
-            <!-- Injected via JS -->
-        </div>
-    </section>
+    </header>
 
-    <section id="experience" class="container">
-        <div class="section-header reveal-element">
-            <h2>Experience</h2>
-            <span>02</span>
-        </div>
-        <div class="experience-log" id="experience-log">
-            <!-- Injected via JS -->
-        </div>
-    </section>
+    <main>
 
-    <section id="stack" class="container">
-        <div class="section-header reveal-element">
-            <h2>Arsenal</h2>
-            <span>03</span>
-        </div>
-        <div class="stack-grid reveal-element" id="stack-grid">
-            <!-- Injected via JS -->
-        </div>
-    </section>
+        <section class="projects tab" id="projects">
 
-    <section id="about" class="container">
-        <!-- Injected via JS -->
-    </section>
+            <div class="section-header fade-in">
+                <span class="section-subtitle">
+                    Selected Works
+                </span>
+                <h2 class="section-title">
+                    Projects
+                </h2>
+            </div>
 
-    <footer id="contact" class="footer-fullscreen container">
-        <!-- Injected via JS -->
+            <div class="project-list" id="project-list">
+            </div>
+
+        </section>
+
+        <section id="tools" class="tools tab">
+
+            <div class="section-header fade-in">
+                <span class="section-subtitle">
+                    My Stack
+                </span>
+                <h2 class="section-title">
+                    Tools I work with
+                </h2>
+            </div>
+
+            <div class="tools-grid fade-in" id="tools-grid">
+
+            </div>
+
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience tab">
+            <div class="section-header fade-in">
+                <span class="section-subtitle">Career Path</span>
+                <h2 class="section-title">Experience</h2>
+            </div>
+
+            <div id="experienceList" class="experience-list"></div>
+        </section>
+
+
+        <!-- About Section -->
+        <section id="about" class="about tab">
+
+
+            <div class="about-grid">
+                <div class="about-text fade-in">
+                    <div class="section-header fade-in">
+                        <span class="section-subtitle">Who I Am</span>
+                        <h2 class="section-title">About Me</h2>
+                    </div>
+                    <p>
+                        I'm Alex, a designer based in San Francisco. My journey began when I tried to customize my
+                        Myspace profile and accidentally discovered I loved code. Since then, I've been obsessively
+                        simplifying complex interfaces.
+                    </p>
+                    <p>
+                        I believe that good design is invisible. It should work so smoothly that the user doesn't even
+                        notice it's there. When I'm not pushing pixels in Figma, you can find me brewing pour-over
+                        coffee, hiking the Pacific Coast trails, or attempting to keep my houseplants alive.
+                    </p>
+                    <a href="mailto:hi@alexrivera.dev" class="btn">Get in Touch</a>
+                </div>
+
+                <div class="about-image fade-in">
+                    <img src="model.jpg" alt="">
+                </div>
+
+            </div>
+        </section>
+
+
+
+    </main>
+    <!-- footer -->
+    <footer id="footer">
+        
     </footer>
 
-    <script src="script.js"></script>
 
+    <script src="script.js"></script>
 </body>
 
 </html>

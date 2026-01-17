@@ -1,0 +1,79 @@
+/* 
+*./utils.css
+ */
+
+/**importing google fonts**/
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Buda:wght@300&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+/**Variables**/
+:root {
+  --background: #f4f1ea;
+  --color: #1a1a1a;
+  --accent: #c65d47;
+  --muted: #8c8682;
+  --line: rgba(0, 0, 0, 0.08);
+
+  /**fonts**/
+  --font-serif: "Buda", serif;
+  --font-sans: "Bricolage Grotesque", sans-serif;
+  --font-mono: "Space Mono", monospace;
+}
+
+/**Reset & Base**/
+*,
+*::before,
+*::after {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  background: var(--background);
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  line-height: 1.3;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+/**Lenis CSS**/
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+::selection {
+  background: var(--accent-color);
+  color: var(--background);
+}
+
+.mono{
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: var(--muted);
+}
+
+/**GrainyOverlay CSS**/
+.noise-overlay {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000000000000000;
+  opacity: 0.06;
+  background-image: url("./grain.jpg");
+  background-size: 100% 100%;
+}
